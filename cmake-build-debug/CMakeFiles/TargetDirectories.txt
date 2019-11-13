@@ -1,0 +1,3 @@
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/cmake-build-debug/CMakeFiles/miner_proccess.dir
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/cmake-build-debug/CMakeFiles/edit_cache.dir
