@@ -12,15 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d77bedac-ec70-4cec-bdb2-f8fb5027f4cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/miner_proccess.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_interface.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +60,11 @@
   </component>
   <component name="ProjectId" id="1TBINGfgKmDg3K5b4OFLUm7Ka4R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="greenplum" />
@@ -74,24 +80,24 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="miner_proccess" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="miner_proccess" TARGET_NAME="miner_proccess" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="miner_proccess" RUN_TARGET_NAME="miner_proccess">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -108,7 +114,9 @@
       <workItem from="1572981395702" duration="13119000" />
       <workItem from="1573148326542" duration="1364000" />
       <workItem from="1573603198377" duration="3092000" />
-      <workItem from="1573616380725" duration="1810000" />
+      <workItem from="1573616380725" duration="3490000" />
+      <workItem from="1575061472862" duration="1964000" />
+      <workItem from="1575142850885" duration="5398000" />
     </task>
     <servers />
   </component>
@@ -127,5 +135,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="472" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575144100175">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="472" y="188" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1575144100175" />
+    <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575063977019">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575063977019" />
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575142852095">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575142852095" />
+    <state x="751" y="473" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575063961398">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="751" y="473" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/46.27.1874.1053@46.27.1874.1053" timestamp="1575063961398" />
   </component>
 </project>

@@ -41,11 +41,31 @@ int cpuMiner() {
 }
 
 void memoryMiner() {
-    FILE *ram = fopen("/proc/meminfo", "rb");
+    FILE *ramInfo = fopen("/proc/meminfo", "rb");
     char line[1024];
 
     for (int i = 0; i < 7; ++i) {
-        fgets(line, 1024, ram);
+        fgets(line, 1024, ramInfo);
+        puts(line);
+    }
+}
+
+void networkMiner(){
+    FILE *networkInfo = fopen("/proc/net/dev", "rb");
+    char line[1024];
+
+    for (int i = 0; i < 4; ++i){
+        fgets(line, 1024, networkInfo);
+        puts(line);
+    }
+}
+
+void diskMiner(){
+    FILE *diskInfo = fopen("/proc/diskstats", "rb");
+    char line[1024];
+
+    for (int i = 8; i < 13; ++i) {
+        fgets(line, 1024, diskInfo);
         puts(line);
     }
 }
@@ -59,6 +79,12 @@ void minerAdminProcess(int minerId) {
             break;
         case 2:
             memoryMiner();
+            break;
+        case 3:
+            networkMiner();
+            break;
+        case 4:
+            diskMiner();
             break;
         default:
             notRecogniceMinerProcessPrint();
@@ -86,8 +112,12 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < argc; ++i) {
         if (strcmp(argv[i], "-c") == 0) {
             fatherProcessMiner(1);
-        } else if (strcmp(argv[i], "-r") == 0) {
+        } else if (strcmp(argv[i], "-m") == 0) {
             fatherProcessMiner(2);
+        } else if (strcmp(argv[i], "-n") == 0){
+            fatherProcessMiner(3);
+        } else if (strcmp(argv[i], "-d") == 0){
+            fatherProcessMiner(4);
         }
     }
 }
