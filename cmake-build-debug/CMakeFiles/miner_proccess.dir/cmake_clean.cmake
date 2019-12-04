@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/miner_proccess.dir/main.c.o"
-  "CMakeFiles/miner_proccess.dir/user_interface.c.o"
   "miner_proccess"
   "miner_proccess.pdb"
 )

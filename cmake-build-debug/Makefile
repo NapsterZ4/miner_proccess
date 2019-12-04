@@ -150,33 +150,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/main.c.s
 .PHONY : main.c.s
 
-user_interface.o: user_interface.c.o
-
-.PHONY : user_interface.o
-
-# target to build an object file
-user_interface.c.o:
-	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/user_interface.c.o
-.PHONY : user_interface.c.o
-
-user_interface.i: user_interface.c.i
-
-.PHONY : user_interface.i
-
-# target to preprocess a source file
-user_interface.c.i:
-	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/user_interface.c.i
-.PHONY : user_interface.c.i
-
-user_interface.s: user_interface.c.s
-
-.PHONY : user_interface.s
-
-# target to generate assembly for a file
-user_interface.c.s:
-	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/user_interface.c.s
-.PHONY : user_interface.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +162,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... user_interface.o"
-	@echo "... user_interface.i"
-	@echo "... user_interface.s"
 .PHONY : help
 
 

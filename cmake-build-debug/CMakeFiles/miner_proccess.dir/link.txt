@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/miner_proccess.dir/main.c.o CMakeFiles/miner_proccess.dir/user_interface.c.o  -o miner_proccess 
+/usr/bin/cc -g   CMakeFiles/miner_proccess.dir/main.c.o  -o miner_proccess 

@@ -4,83 +4,86 @@
 
 #define ERROR -1
 
-int cpuMiner() {
+char * cpuMiner() {
     FILE *cpuInfo = fopen("/proc/cpuinfo", "rb");
-    char line[1024];
-    int count = 0;
+    static char line[1024];
 
-    fgets(line, 1024, cpuInfo);
-    if (strstr(line, "cpu cores") != NULL) {
-        puts(line);
+    while (fgets(line, 1024, cpuInfo) != NULL) {
+        if (strstr(line, "cpu cores") != NULL) {
+            puts(line);
+        }
+
+        if (strstr(line, "model name") != NULL) {
+            printf("\n");
+            puts(line);
+        }
+
+        if (strstr(line, "processor") != NULL) {
+            printf("\n");
+            puts(line);
+        }
+
+        if (strstr(line, "cpu MHz") != NULL) {
+            printf("\n");
+            puts(line);
+        }
     }
-
-    if (strstr(line, "model name") != NULL) {
-        printf("\n");
-        puts(line);
-    }
-
-    if (strstr(line, "processor") != NULL) {
-        printf("\n");
-        puts(line);
-        count++;
-    }
-
-    if (strstr(line, "cpu MHz") != NULL) {
-        printf("\n");
-        puts(line);
-    }
-
-    return count;
+    return line;
 }
 
-void memoryMiner() {
+char * memoryMiner() {
     FILE *ramInfo = fopen("/proc/meminfo", "rb");
-    char line[1024];
+    static char line[1024];
 
     for (int i = 0; i < 7; ++i) {
         fgets(line, 1024, ramInfo);
         puts(line);
     }
+    return line;
 }
 
-void networkMiner() {
+char * networkMiner() {
     FILE *networkInfo = fopen("/proc/net/dev", "rb");
-    char line[1024];
+    static char line[1024];
 
     for (int i = 0; i < 4; ++i) {
         fgets(line, 1024, networkInfo);
         puts(line);
     }
+    return line;
 }
 
-void diskMiner() {
+char * diskMiner() {
     FILE *diskInfo = fopen("/proc/diskstats", "rb");
-    char line[1024];
+    static char line[1024];
 
     for (int i = 8; i < 13; ++i) {
         fgets(line, 1024, diskInfo);
         puts(line);
     }
+    return line;
 }
 
 void minerAdminProcess(int minerId) {
-    int cpuInfo;
+    char cpuInformation[1024];
+    char memoryInformation[1024];
+    char networkInformation[1024];
+    char diskInformation[1024];
     switch (minerId) {
         case 1:
-            cpuInfo = cpuMiner();
-            printf("cpuInformationPrint"), cpuInfo;
+            strcpy(cpuInformation, cpuMiner());
             break;
         case 2:
-            memoryMiner();
+            strcpy(memoryInformation, memoryMiner());
             break;
         case 3:
-            networkMiner();
+            strcpy(networkInformation, networkMiner());
             break;
         case 4:
-            diskMiner();
+            strcpy(diskInformation, diskMiner());
             break;
         default:
-            printf("notRecogniceMinerProcessPrint");
+            printf("Not recognize miner process, please insert other entry");
             break;
     }
 }
@@ -96,9 +99,10 @@ pid_t fatherProcessMiner(int newMinerId) {
             minerAdminProcess(minerId);
             break;
         default:
-            printf("fatherCreatedPrint");
+            printf("Father process was created \n");
             break;
     }
+    return 0;
 }
 
 int main(int argc, char *argv[]) {
