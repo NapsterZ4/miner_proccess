@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#include "user_interface.c"
 
 #define ERROR -1
 
@@ -10,33 +9,27 @@ int cpuMiner() {
     char line[1024];
     int count = 0;
 
-    while (fgets(line, 1024, cpuInfo) != NULL) {
-        if (strstr(line, "cpu cores") != NULL) {
-            puts(line);
-        } else {
-            notContainsCpuCoresInfo();
-        }
-
-        if (strstr(line, "model name") != NULL) {
-            lineBreak();
-            puts(line);
-        } else {
-            notContainsModelNameInfo();
-        }
-
-        if (strstr(line, "processor") != NULL) {
-            lineBreak();
-            puts(line);
-            count++;
-        }
-
-        if (strstr(line, "cpu MHz") != NULL) {
-            lineBreak();
-            puts(line);
-        } else {
-            notContainsCpuMHZInfo();
-        }
+    fgets(line, 1024, cpuInfo);
+    if (strstr(line, "cpu cores") != NULL) {
+        puts(line);
     }
+
+    if (strstr(line, "model name") != NULL) {
+        printf("\n");
+        puts(line);
+    }
+
+    if (strstr(line, "processor") != NULL) {
+        printf("\n");
+        puts(line);
+        count++;
+    }
+
+    if (strstr(line, "cpu MHz") != NULL) {
+        printf("\n");
+        puts(line);
+    }
+
     return count;
 }
 
@@ -50,17 +43,17 @@ void memoryMiner() {
     }
 }
 
-void networkMiner(){
+void networkMiner() {
     FILE *networkInfo = fopen("/proc/net/dev", "rb");
     char line[1024];
 
-    for (int i = 0; i < 4; ++i){
+    for (int i = 0; i < 4; ++i) {
         fgets(line, 1024, networkInfo);
         puts(line);
     }
 }
 
-void diskMiner(){
+void diskMiner() {
     FILE *diskInfo = fopen("/proc/diskstats", "rb");
     char line[1024];
 
@@ -75,7 +68,7 @@ void minerAdminProcess(int minerId) {
     switch (minerId) {
         case 1:
             cpuInfo = cpuMiner();
-            cpuInformationPrint(cpuInfo);
+            printf("cpuInformationPrint", cpuInfo);
             break;
         case 2:
             memoryMiner();
@@ -87,7 +80,7 @@ void minerAdminProcess(int minerId) {
             diskMiner();
             break;
         default:
-            notRecogniceMinerProcessPrint();
+            printf("notRecogniceMinerProcessPrint");
             break;
     }
 }
@@ -103,7 +96,7 @@ pid_t fatherProcessMiner(int newMinerId) {
             minerAdminProcess(minerId);
             break;
         default:
-            fatherCreatedPrint();
+            printf("fatherCreatedPrint");
             break;
     }
 }
@@ -114,9 +107,9 @@ int main(int argc, char *argv[]) {
             fatherProcessMiner(1);
         } else if (strcmp(argv[i], "-m") == 0) {
             fatherProcessMiner(2);
-        } else if (strcmp(argv[i], "-n") == 0){
+        } else if (strcmp(argv[i], "-n") == 0) {
             fatherProcessMiner(3);
-        } else if (strcmp(argv[i], "-d") == 0){
+        } else if (strcmp(argv[i], "-d") == 0) {
             fatherProcessMiner(4);
         }
     }

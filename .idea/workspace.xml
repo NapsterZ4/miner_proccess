@@ -12,15 +12,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d77bedac-ec70-4cec-bdb2-f8fb5027f4cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Recomendations" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/user_interface.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/miner_proccess.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/miner_proccess.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_interface.c" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +93,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RunManager">
     <configuration name="miner_proccess" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="miner_proccess" TARGET_NAME="miner_proccess" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="miner_proccess" RUN_TARGET_NAME="miner_proccess">
@@ -117,6 +132,9 @@
       <workItem from="1573616380725" duration="3490000" />
       <workItem from="1575061472862" duration="1964000" />
       <workItem from="1575142850885" duration="5398000" />
+      <workItem from="1575415778034" duration="14000" />
+      <workItem from="1575415803611" duration="1459000" />
+      <workItem from="1575432884517" duration="272000" />
     </task>
     <servers />
   </component>
@@ -137,21 +155,49 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="472" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575144100175">
+    <state x="655" y="358" width="645" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575417063080">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="472" y="188" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1575144100175" />
+    <state x="655" y="358" width="645" height="397" key="#com.intellij.fileTypes.FileTypeChooser/46.27.1874.1053@46.27.1874.1053" timestamp="1575417063080" />
+    <state x="666" y="281" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575415783159">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="666" y="281" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575415783159" />
+    <state width="1828" height="274" key="GridCell.Tab.0.bottom" timestamp="1575432986259">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state width="1828" height="274" key="GridCell.Tab.0.bottom/46.27.1874.1053@46.27.1874.1053" timestamp="1575432986259" />
+    <state width="1828" height="274" key="GridCell.Tab.0.center" timestamp="1575432986259">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state width="1828" height="274" key="GridCell.Tab.0.center/46.27.1874.1053@46.27.1874.1053" timestamp="1575432986259" />
+    <state width="1828" height="274" key="GridCell.Tab.0.left" timestamp="1575432986258">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state width="1828" height="274" key="GridCell.Tab.0.left/46.27.1874.1053@46.27.1874.1053" timestamp="1575432986258" />
+    <state width="1828" height="274" key="GridCell.Tab.0.right" timestamp="1575432986259">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state width="1828" height="274" key="GridCell.Tab.0.right/46.27.1874.1053@46.27.1874.1053" timestamp="1575432986259" />
+    <state x="273" y="83" width="1329" height="892" key="SettingsEditor" timestamp="1575433160567">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="273" y="83" width="1329" height="892" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1575433160567" />
     <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575063977019">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575063977019" />
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575142852095">
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575432909570">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575142852095" />
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575432909570" />
     <state x="751" y="473" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575063961398">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="751" y="473" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/46.27.1874.1053@46.27.1874.1053" timestamp="1575063961398" />
+    <state x="647" y="252" key="run.anything.popup" timestamp="1575156813297">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="647" y="252" key="run.anything.popup/46.27.1874.1053@46.27.1874.1053" timestamp="1575156813297" />
   </component>
 </project>

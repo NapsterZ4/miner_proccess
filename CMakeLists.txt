@@ -3,4 +3,4 @@ project(miner_proccess C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(miner_proccess main.c user_interface.c)
+add_executable(miner_proccess main.c user_interface.h)

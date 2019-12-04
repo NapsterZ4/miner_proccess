@@ -1,0 +1,9 @@
+//
+// Created by napster on 3/12/19.
+//
+
+#ifndef MINER_PROCCESS_USER_INTERFACE_H
+#define MINER_PROCCESS_USER_INTERFACE_H
+
+
+#endif //MINER_PROCCESS_USER_INTERFACE_H

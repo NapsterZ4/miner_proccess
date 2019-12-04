@@ -81,7 +81,7 @@
 		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/main.c">
 			<Option target="miner_proccess"/>
 		</Unit>
-		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/user_interface.c">
+		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/user_interface.h">
 			<Option target="miner_proccess"/>
 		</Unit>
 		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/CMakeLists.txt">
