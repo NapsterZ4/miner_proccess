@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <pthread.h>
+#include "queues_file.h" //Biblioteca de linux para colas
 
 #define ERROR -1
+
+static pthread_mutex_t mtx; //Sincronizacion de procesos
 
 char * cpuMiner() {
     FILE *cpuInfo = fopen("/proc/cpuinfo", "rb");
@@ -88,7 +92,7 @@ void minerAdminProcess(int minerId) {
     }
 }
 
-pid_t fatherProcessMiner(int newMinerId) {
+pid_t parentProcessMiner(int newMinerId) {
     int minerId = newMinerId;
     pid_t childProcess;
 
@@ -108,13 +112,13 @@ pid_t fatherProcessMiner(int newMinerId) {
 int main(int argc, char *argv[]) {
     for (int i = 0; i < argc; ++i) {
         if (strcmp(argv[i], "-c") == 0) {
-            fatherProcessMiner(1);
+            parentProcessMiner(1);
         } else if (strcmp(argv[i], "-m") == 0) {
-            fatherProcessMiner(2);
+            parentProcessMiner(2);
         } else if (strcmp(argv[i], "-n") == 0) {
-            fatherProcessMiner(3);
+            parentProcessMiner(3);
         } else if (strcmp(argv[i], "-d") == 0) {
-            fatherProcessMiner(4);
+            parentProcessMiner(4);
         }
     }
 }

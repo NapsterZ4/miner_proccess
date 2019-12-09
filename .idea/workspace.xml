@@ -12,27 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d77bedac-ec70-4cec-bdb2-f8fb5027f4cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/queues_file.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/user_interface.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/miner_proccess.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/miner_proccess.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_interface.c" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +54,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -100,7 +92,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="miner_proccess" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="miner_proccess" TARGET_NAME="miner_proccess" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="miner_proccess" RUN_TARGET_NAME="miner_proccess">
@@ -139,7 +131,12 @@
       <workItem from="1573616380725" duration="3490000" />
       <workItem from="1575061472862" duration="1964000" />
       <workItem from="1575142850885" duration="5686000" />
-      <workItem from="1575434315958" duration="4038000" />
+      <workItem from="1575434315958" duration="4949000" />
+      <workItem from="1575750286437" duration="3554000" />
+      <workItem from="1575774834729" duration="3700000" />
+      <workItem from="1575834238564" duration="602000" />
+      <workItem from="1575857635291" duration="5611000" />
+      <workItem from="1575902867160" duration="2855000" />
     </task>
     <servers />
   </component>
@@ -164,6 +161,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="578" y="215" width="800" height="684" key="#Notifications/46.27.1874.1053@46.27.1874.1053" timestamp="1575155214619" />
+    <state x="716" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575867384139">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state x="716" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/46.27.3240.1053@46.27.3240.1053" timestamp="1575867384139" />
     <state x="3" y="545" width="1674" height="853" key="DiffContextDialog" timestamp="1575436931759">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
@@ -172,30 +173,30 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/46.27.1874.1053@46.27.1874.1053" timestamp="1575436348518" />
-    <state width="1828" height="453" key="GridCell.Tab.0.bottom" timestamp="1575435260469">
+    <state width="1828" height="453" key="GridCell.Tab.0.bottom" timestamp="1575439450290">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state width="1828" height="453" key="GridCell.Tab.0.bottom/46.27.1874.1053@46.27.1874.1053" timestamp="1575435260469" />
-    <state width="1828" height="453" key="GridCell.Tab.0.center" timestamp="1575435260469">
+    <state width="1828" height="453" key="GridCell.Tab.0.bottom/46.27.1874.1053@46.27.1874.1053" timestamp="1575439450290" />
+    <state width="1828" height="453" key="GridCell.Tab.0.center" timestamp="1575439450290">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state width="1828" height="453" key="GridCell.Tab.0.center/46.27.1874.1053@46.27.1874.1053" timestamp="1575435260469" />
-    <state width="1828" height="453" key="GridCell.Tab.0.left" timestamp="1575435260468">
+    <state width="1828" height="453" key="GridCell.Tab.0.center/46.27.1874.1053@46.27.1874.1053" timestamp="1575439450290" />
+    <state width="1828" height="453" key="GridCell.Tab.0.left" timestamp="1575439450289">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state width="1828" height="453" key="GridCell.Tab.0.left/46.27.1874.1053@46.27.1874.1053" timestamp="1575435260468" />
-    <state width="1828" height="453" key="GridCell.Tab.0.right" timestamp="1575435260469">
+    <state width="1828" height="453" key="GridCell.Tab.0.left/46.27.1874.1053@46.27.1874.1053" timestamp="1575439450289" />
+    <state width="1828" height="453" key="GridCell.Tab.0.right" timestamp="1575439450290">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state width="1828" height="453" key="GridCell.Tab.0.right/46.27.1874.1053@46.27.1874.1053" timestamp="1575435260469" />
+    <state width="1828" height="453" key="GridCell.Tab.0.right/46.27.1874.1053@46.27.1874.1053" timestamp="1575439450290" />
     <state x="665" y="266" width="626" height="581" key="RollbackChangesDialog" timestamp="1575436787870">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="665" y="266" width="626" height="581" key="RollbackChangesDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575436787870" />
-    <state x="472" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575144100175">
+    <state x="811" y="102" width="1022" height="737" key="SettingsEditor" timestamp="1575781409354">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="472" y="188" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1575144100175" />
+    <state x="811" y="102" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1575781409354" />
     <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1575155193034">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
@@ -204,10 +205,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575063977019" />
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575434319325">
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575902867600">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575434319325" />
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575902867600" />
     <state x="751" y="473" width="454" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575155278772">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>

@@ -81,6 +81,9 @@
 		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/main.c">
 			<Option target="miner_proccess"/>
 		</Unit>
+		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/queues_file.h">
+			<Option target="miner_proccess"/>
+		</Unit>
 		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
