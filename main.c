@@ -2,11 +2,17 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
+#include <signal.h>
 #include "queues_file.h" //Biblioteca de linux para colas
 
 #define ERROR -1
 
 static pthread_mutex_t mtx; //Sincronizacion de procesos
+
+void handler1(int sig){
+    printf("The parent process Death!!!!");
+    exit(0);
+}
 
 char * cpuMiner() {
     FILE *cpuInfo = fopen("/proc/cpuinfo", "rb");
@@ -103,7 +109,8 @@ pid_t parentProcessMiner(int newMinerId) {
             minerAdminProcess(minerId);
             break;
         default:
-            printf("Father process was created \n");
+            kill(childProcess, SIGUSR1);
+            signal(SIGCHLD, handler1);
             break;
     }
     return 0;
@@ -121,4 +128,5 @@ int main(int argc, char *argv[]) {
             parentProcessMiner(4);
         }
     }
+    signal(getppid(), (__sighandler_t) SIGKILL);
 }

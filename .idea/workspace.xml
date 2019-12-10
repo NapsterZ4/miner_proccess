@@ -12,17 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d77bedac-ec70-4cec-bdb2-f8fb5027f4cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/queues_file.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/miner_proccess.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/miner_proccess.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +126,11 @@
       <workItem from="1575774834729" duration="3700000" />
       <workItem from="1575834238564" duration="602000" />
       <workItem from="1575857635291" duration="5611000" />
-      <workItem from="1575902867160" duration="2855000" />
+      <workItem from="1575902867160" duration="6861000" />
+      <workItem from="1575947059065" duration="7345000" />
+      <workItem from="1575996752528" duration="481000" />
+      <workItem from="1576004801552" duration="1015000" />
+      <workItem from="1576015688615" duration="2818000" />
     </task>
     <servers />
   </component>
@@ -205,14 +199,18 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575063977019" />
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575902867600">
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576015689142">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575902867600" />
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1576015689142" />
     <state x="751" y="473" width="454" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575155278772">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="751" y="473" width="454" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/46.27.1874.1053@46.27.1874.1053" timestamp="1575155278772" />
+    <state x="1920" y="0" width="1366" height="768" key="dock-window-1" timestamp="1575954085743">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state x="1920" y="0" width="1366" height="768" key="dock-window-1/46.27.3240.1053@46.27.3240.1053" timestamp="1575954085743" />
     <state x="392" y="225" width="645" height="272" key="git4idea.rebase.GitRebaseDialog" timestamp="1575155174825">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
