@@ -1,0 +1,4 @@
+- Signals
+- Parser
+- Sync process to queues
+- Connect to cloud
