@@ -1,4 +1,3 @@
-- Signals
 - Parser
-- Sync process to queues
+- Sync process to queues (thread)
 - Connect to cloud

@@ -13,4 +13,18 @@ string.h
 -
 unistd.h
 -
+pthread.h
+-
+signal.h
+-
+queues_file.h
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/queues_file.h
+
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/queues_file.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
 

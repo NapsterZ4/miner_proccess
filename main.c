@@ -10,7 +10,7 @@
 static pthread_mutex_t mtx; //Sincronizacion de procesos
 
 void handler1(int sig){
-    printf("The parent process Death!!!!");
+    printf("Process control");
     exit(0);
 }
 
@@ -107,10 +107,11 @@ pid_t parentProcessMiner(int newMinerId) {
             return ERROR;
         case 0:
             minerAdminProcess(minerId);
+            signal(SIGCHLD, handler1); //Eliminar el proceso padre
+            printf("\n Signal parent death exec");
             break;
         default:
-            kill(childProcess, SIGUSR1);
-            signal(SIGCHLD, handler1);
+            printf("The parent process was create \n");
             break;
     }
     return 0;
