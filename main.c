@@ -9,88 +9,98 @@
 
 static pthread_mutex_t mtx; //Sincronizacion de procesos
 
-void handler1(int sig){
+void handler1(){
     printf("Process control");
     exit(0);
 }
 
-char * cpuMiner() {
-    FILE *cpuInfo = fopen("/proc/cpuinfo", "rb");
-    static char line[1024];
+int cpuMiner() {
+    FILE *cpuInfo = fopen("/proc/stat", "rb");
+    char line[1024];
+    unsigned long int user, nice, system, idle, iowait, irq, softirt;
+    int cpuUsage = 0;
 
-    while (fgets(line, 1024, cpuInfo) != NULL) {
-        if (strstr(line, "cpu cores") != NULL) {
-            puts(line);
-        }
-
-        if (strstr(line, "model name") != NULL) {
-            printf("\n");
-            puts(line);
-        }
-
-        if (strstr(line, "processor") != NULL) {
-            printf("\n");
-            puts(line);
-        }
-
-        if (strstr(line, "cpu MHz") != NULL) {
-            printf("\n");
-            puts(line);
+    while (fgets(line, sizeof(line), cpuInfo) != NULL) {
+        if (strstr(line, "cpu ") != NULL) {
+            sscanf(line, "%lu %lu %lu %lu %lu %lu %lu", &user, &nice, &system, &idle, &iowait, &irq, &softirt);
+            cpuUsage = (int) nice;
         }
     }
-    return line;
+
+    fclose(cpuInfo);
+    return cpuUsage;
 }
 
-char * memoryMiner() {
+int memoryMiner() {
     FILE *ramInfo = fopen("/proc/meminfo", "rb");
-    static char line[1024];
+    char line[1024];
+    unsigned long int memTotal, memF, memA;
+    int totalMemAvailable = 0;
 
-    for (int i = 0; i < 7; ++i) {
-        fgets(line, 1024, ramInfo);
-        puts(line);
+    for (int i = 2; i < 3; ++i) {
+        fgets(line, sizeof(line), ramInfo);
+        sscanf(line, "%lu %lu %lu", &memTotal, &memF, &memA);
+        totalMemAvailable = (int) memF;
     }
-    return line;
+
+    fclose(ramInfo);
+    return totalMemAvailable;
 }
 
-char * networkMiner() {
+int networkMiner() {
     FILE *networkInfo = fopen("/proc/net/dev", "rb");
-    static char line[1024];
+    char line[1024];
+    unsigned long int interface, bytesPackets;
+    int netUsage = 0;
 
-    for (int i = 0; i < 4; ++i) {
-        fgets(line, 1024, networkInfo);
-        puts(line);
+    for (int i = 0; i < 2; ++i) {
+        fgets(line, sizeof(line), networkInfo);
+        sscanf(line, "%lu %lu", &interface, &bytesPackets);
+        netUsage = (int) bytesPackets;
     }
-    return line;
+
+    fclose(networkInfo);
+    return netUsage;
 }
 
-char * diskMiner() {
-    FILE *diskInfo = fopen("/proc/diskstats", "rb");
+int diskMiner() {
+    FILE *diskInfo = popen("df -k", "r");
     static char line[1024];
+    unsigned long int fileSystem, kBlocks, used, available, use, mounted;
+    int diskUsage = 0;
 
-    for (int i = 8; i < 13; ++i) {
-        fgets(line, 1024, diskInfo);
-        puts(line);
+    while (fgets(line, sizeof(line), diskInfo) != NULL) {
+        if (strstr(line, "home") != NULL) {
+            sscanf(line, "%lu %lu %lu %lu %lu %lu", &fileSystem, &kBlocks, &used, &available, &use, &mounted);
+            diskUsage = (int) used;
+        }
     }
-    return line;
+
+    fclose(diskInfo);
+    return diskUsage;
 }
 
 void minerAdminProcess(int minerId) {
-    char cpuInformation[1024];
-    char memoryInformation[1024];
-    char networkInformation[1024];
-    char diskInformation[1024];
+    int cpuInformation;
+    int memoryInformation;
+    int networkInformation;
+    int diskInformation;
     switch (minerId) {
         case 1:
-            strcpy(cpuInformation, cpuMiner());
+            cpuInformation = cpuMiner();
+            printf("Cpu info: %d", cpuInformation);
             break;
         case 2:
-            strcpy(memoryInformation, memoryMiner());
+            memoryInformation = memoryMiner();
+            printf("Mem info: %d", memoryInformation);
             break;
         case 3:
-            strcpy(networkInformation, networkMiner());
+            networkInformation = networkMiner();
+            printf("Net info: %d", networkInformation);
             break;
         case 4:
-            strcpy(diskInformation, diskMiner());
+            diskInformation = diskMiner();
+            printf("Disk info: %d", diskInformation);
             break;
         default:
             printf("Not recognize miner process, please insert other entry");
@@ -108,10 +118,10 @@ pid_t parentProcessMiner(int newMinerId) {
         case 0:
             minerAdminProcess(minerId);
             signal(SIGCHLD, handler1); //Eliminar el proceso padre
-            printf("\n Signal parent death exec");
+            printf("\nSignal parent death exec\n");
             break;
         default:
-            printf("The parent process was create \n");
+            printf("The parent process was create\n");
             break;
     }
     return 0;

@@ -13,13 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d77bedac-ec70-4cec-bdb2-f8fb5027f4cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/miner_proccess" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/miner_proccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_taks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project_taks.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +82,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="miner_proccess" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="miner_proccess" TARGET_NAME="miner_proccess" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="miner_proccess" RUN_TARGET_NAME="miner_proccess">
@@ -136,7 +130,9 @@
       <workItem from="1575947059065" duration="7345000" />
       <workItem from="1575996752528" duration="481000" />
       <workItem from="1576004801552" duration="1015000" />
-      <workItem from="1576015688615" duration="6928000" />
+      <workItem from="1576015688615" duration="10223000" />
+      <workItem from="1576036118648" duration="6569000" />
+      <workItem from="1576086384068" duration="15655000" />
     </task>
     <servers />
   </component>
@@ -157,10 +153,19 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="578" y="215" width="800" height="684" key="#Inspections" timestamp="1576103456890">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state x="578" y="215" width="800" height="684" key="#Inspections/46.27.3240.1053@46.27.3240.1053" timestamp="1576103456890" />
     <state x="578" y="215" width="800" height="684" key="#Notifications" timestamp="1575155214619">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="578" y="215" width="800" height="684" key="#Notifications/46.27.1874.1053@46.27.1874.1053" timestamp="1575155214619" />
+    <state x="729" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576103302144">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state x="441" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1576088513517" />
+    <state x="729" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/46.27.3240.1053@46.27.3240.1053" timestamp="1576103302144" />
     <state x="716" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575867384139">
       <screen x="46" y="27" width="3240" height="1053" />
     </state>
@@ -173,30 +178,54 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/46.27.1874.1053@46.27.1874.1053" timestamp="1575436348518" />
-    <state width="1828" height="328" key="GridCell.Tab.0.bottom" timestamp="1576018825537">
-      <screen x="46" y="27" width="1874" height="1053" />
+    <state width="1828" height="344" key="GridCell.Tab.0.bottom" timestamp="1576104735414">
+      <screen x="46" y="27" width="3240" height="1053" />
     </state>
-    <state width="1828" height="328" key="GridCell.Tab.0.bottom/46.27.1874.1053@46.27.1874.1053" timestamp="1576018825537" />
-    <state width="1828" height="328" key="GridCell.Tab.0.center" timestamp="1576018825536">
-      <screen x="46" y="27" width="1874" height="1053" />
+    <state width="1828" height="344" key="GridCell.Tab.0.bottom/46.27.1874.1053@46.27.1874.1053" timestamp="1576088589742" />
+    <state width="1828" height="344" key="GridCell.Tab.0.bottom/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735414" />
+    <state width="1828" height="344" key="GridCell.Tab.0.center" timestamp="1576104735413">
+      <screen x="46" y="27" width="3240" height="1053" />
     </state>
-    <state width="1828" height="328" key="GridCell.Tab.0.center/46.27.1874.1053@46.27.1874.1053" timestamp="1576018825536" />
-    <state width="1828" height="328" key="GridCell.Tab.0.left" timestamp="1576018825535">
-      <screen x="46" y="27" width="1874" height="1053" />
+    <state width="1828" height="344" key="GridCell.Tab.0.center/46.27.1874.1053@46.27.1874.1053" timestamp="1576088589742" />
+    <state width="1828" height="344" key="GridCell.Tab.0.center/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735413" />
+    <state width="1828" height="344" key="GridCell.Tab.0.left" timestamp="1576104735413">
+      <screen x="46" y="27" width="3240" height="1053" />
     </state>
-    <state width="1828" height="328" key="GridCell.Tab.0.left/46.27.1874.1053@46.27.1874.1053" timestamp="1576018825535" />
-    <state width="1828" height="328" key="GridCell.Tab.0.right" timestamp="1576018825536">
-      <screen x="46" y="27" width="1874" height="1053" />
+    <state width="1828" height="344" key="GridCell.Tab.0.left/46.27.1874.1053@46.27.1874.1053" timestamp="1576088589741" />
+    <state width="1828" height="344" key="GridCell.Tab.0.left/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735413" />
+    <state width="1828" height="344" key="GridCell.Tab.0.right" timestamp="1576104735414">
+      <screen x="46" y="27" width="3240" height="1053" />
     </state>
-    <state width="1828" height="328" key="GridCell.Tab.0.right/46.27.1874.1053@46.27.1874.1053" timestamp="1576018825536" />
+    <state width="1828" height="344" key="GridCell.Tab.0.right/46.27.1874.1053@46.27.1874.1053" timestamp="1576088589742" />
+    <state width="1828" height="344" key="GridCell.Tab.0.right/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735414" />
+    <state width="1828" height="340" key="GridCell.Tab.1.bottom" timestamp="1576104735410">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state width="1828" height="340" key="GridCell.Tab.1.bottom/46.27.1874.1053@46.27.1874.1053" timestamp="1576088515660" />
+    <state width="1828" height="340" key="GridCell.Tab.1.bottom/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735410" />
+    <state width="1828" height="340" key="GridCell.Tab.1.center" timestamp="1576104735407">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state width="1828" height="340" key="GridCell.Tab.1.center/46.27.1874.1053@46.27.1874.1053" timestamp="1576088515660" />
+    <state width="1828" height="340" key="GridCell.Tab.1.center/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735407" />
+    <state width="1828" height="340" key="GridCell.Tab.1.left" timestamp="1576104735406">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state width="1828" height="340" key="GridCell.Tab.1.left/46.27.1874.1053@46.27.1874.1053" timestamp="1576088515660" />
+    <state width="1828" height="340" key="GridCell.Tab.1.left/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735406" />
+    <state width="1828" height="340" key="GridCell.Tab.1.right" timestamp="1576104735408">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state width="1828" height="340" key="GridCell.Tab.1.right/46.27.1874.1053@46.27.1874.1053" timestamp="1576088515660" />
+    <state width="1828" height="340" key="GridCell.Tab.1.right/46.27.3240.1053@46.27.3240.1053" timestamp="1576104735408" />
     <state x="665" y="266" width="626" height="581" key="RollbackChangesDialog" timestamp="1575436787870">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="665" y="266" width="626" height="581" key="RollbackChangesDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575436787870" />
-    <state x="811" y="102" width="1022" height="737" key="SettingsEditor" timestamp="1575781409354">
+    <state x="509" y="92" width="1022" height="737" key="SettingsEditor" timestamp="1576094402358">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="811" y="102" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1575781409354" />
+    <state x="509" y="92" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1576094402358" />
     <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1575155193034">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
@@ -205,10 +234,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="146" y="127" width="1674" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575063977019" />
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576015689142">
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576086414140">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1576015689142" />
+    <state x="639" y="380" key="com.intellij.ide.util.TipDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1576086414140" />
     <state x="751" y="473" width="454" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575155278772">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
@@ -221,5 +250,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="392" y="225" width="645" height="272" key="git4idea.rebase.GitRebaseDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575155174825" />
+    <state x="1083" y="259" width="1162" height="678" key="search.everywhere.popup" timestamp="1576102008555">
+      <screen x="46" y="27" width="3240" height="1053" />
+    </state>
+    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup/46.27.1874.1053@46.27.1874.1053" timestamp="1576089549586" />
+    <state x="1083" y="259" width="1162" height="678" key="search.everywhere.popup/46.27.3240.1053@46.27.3240.1053" timestamp="1576102008555" />
   </component>
 </project>
