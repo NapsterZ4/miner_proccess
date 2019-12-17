@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/http.c" "/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/cmake-build-debug/CMakeFiles/miner_proccess.dir/http.c.o"
   "/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/main.c" "/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

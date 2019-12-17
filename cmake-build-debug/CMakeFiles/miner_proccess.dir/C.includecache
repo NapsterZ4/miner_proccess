@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/http.h
+stdio.h
+-
+curl/curl.h
+-
+stdio.h
+-
+string.h
+-
+
 /mnt/napster/LEAD University/Sistemas operativos/miner_proccess/main.c
 stdio.h
 -
@@ -17,8 +27,12 @@ pthread.h
 -
 signal.h
 -
+time.h
+-
 queues_file.h
 /mnt/napster/LEAD University/Sistemas operativos/miner_proccess/queues_file.h
+http.h
+/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/http.h
 
 /mnt/napster/LEAD University/Sistemas operativos/miner_proccess/queues_file.h
 stdio.h

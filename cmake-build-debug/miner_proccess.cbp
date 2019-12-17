@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/http.c">
+			<Option target="miner_proccess"/>
+		</Unit>
+		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/http.h">
+			<Option target="miner_proccess"/>
+		</Unit>
 		<Unit filename="/mnt/napster/LEAD University/Sistemas operativos/miner_proccess/main.c">
 			<Option target="miner_proccess"/>
 		</Unit>

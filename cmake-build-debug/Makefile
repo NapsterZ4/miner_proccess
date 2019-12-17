@@ -123,6 +123,33 @@ miner_proccess/fast:
 	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/build
 .PHONY : miner_proccess/fast
 
+http.o: http.c.o
+
+.PHONY : http.o
+
+# target to build an object file
+http.c.o:
+	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/http.c.o
+.PHONY : http.c.o
+
+http.i: http.c.i
+
+.PHONY : http.i
+
+# target to preprocess a source file
+http.c.i:
+	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/http.c.i
+.PHONY : http.c.i
+
+http.s: http.c.s
+
+.PHONY : http.s
+
+# target to generate assembly for a file
+http.c.s:
+	$(MAKE) -f CMakeFiles/miner_proccess.dir/build.make CMakeFiles/miner_proccess.dir/http.c.s
+.PHONY : http.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... miner_proccess"
 	@echo "... edit_cache"
+	@echo "... http.o"
+	@echo "... http.i"
+	@echo "... http.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
