@@ -7,50 +7,49 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdbool.h>
 
-typedef int DATA; //Tipo de dato a almacenar
-typedef struct {
-    DATA *buf;
-    size_t head, tail, alloc;
-} queue_t, *queue;
+#include <sys/queue.h>
 
-queue q_new(){
-    queue q = malloc(sizeof(queue_t));
-    q->buf = malloc(sizeof(DATA) * (q->alloc = 4));
-    q->head = q->tail = 0;
-    return q;
-}
+struct entry {
+    int value;
+    TAILQ_ENTRY(entry) entries;
+};
 
-int isEmpty(queue q){
-    return q->tail == q->head;
-}
+typedef struct entry entry_t;
 
-void enqueue(queue q, DATA n){
-    if (q->tail >= q->alloc) q->tail = 0;
-    q->buf[q->tail++] = n;
+TAILQ_HEAD(FIFOList_s, entry);
 
-    if (q->tail == q->alloc) {
-        q->buf = realloc(q->buf, sizeof(DATA) * q->alloc * 2);
-        if (q->head) {
-            memcpy(q->buf + q->head + q->alloc, q->buf + q->head,
-                   sizeof(DATA) * (q->alloc - q->head));
-            q->head += q->alloc;
-        } else
-            q->tail = q->alloc;
-        q->alloc *= 2;
+typedef struct FIFOList_s FIFOList;
+
+bool m_enqueue(int v, FIFOList *l)
+{
+    entry_t *val;
+    val = malloc(sizeof(entry_t));
+    if ( val != NULL ) {
+        val->value = v;
+        TAILQ_INSERT_TAIL(l, val, entries);
+        return true;
     }
+    return false;
 }
 
-int dequeue(queue q, DATA *n){
-    if (q->head == q->tail) return 0;
-    *n = q->buf[q->head++];
-    if (q->head >= q->alloc) {
-        q->head = 0;
-        if (q->alloc >= 512 && q->tail < q->alloc / 2)
-            q->buf = realloc(q->buf, sizeof(DATA) * (q->alloc/=2));
+bool m_dequeue(int *v, FIFOList *l)
+{
+    entry_t *e = l->tqh_first;
+    if ( e != NULL ) {
+        *v = e->value;
+        TAILQ_REMOVE(l, e, entries);
+        free(e);
+        return true;
     }
-    return 1;
+    return false;
+}
+
+bool isQueueEmpty(FIFOList *l)
+{
+    if ( l->tqh_first == NULL ) return true;
+    return false;
 }
 
 #endif //MINER_PROCCESS_QUEUES_FILE_H

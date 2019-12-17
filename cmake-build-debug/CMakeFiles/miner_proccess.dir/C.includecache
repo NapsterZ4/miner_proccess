@@ -25,6 +25,8 @@ stdio.h
 -
 stdlib.h
 -
-string.h
+stdbool.h
+-
+sys/queue.h
 -
 

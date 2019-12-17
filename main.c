@@ -3,11 +3,14 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <signal.h>
+#include <time.h>
 #include "queues_file.h" //Biblioteca de linux para colas
+#include "http.h"
 
 #define ERROR -1
+#define BUF_LEN 256
 
-static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER; //Sincronizacion de procesos
+static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER; //Sincronizacion de procesos
 
 void handler1(){
     printf("Process control");
@@ -83,12 +86,70 @@ int diskMiner() {
 }
 
 void * insertData(int data){
-    return EXIT_SUCCESS;
+    FIFOList head;
+    int s;
+
+    s = pthread_mutex_lock(&mutex);
+    if (s != 0){
+        printf("pthread_mutex_lock error in enqueue");
+    }
+
+    TAILQ_INIT(&head);
+    m_enqueue(data, &head); //Queue data
+
+    s = pthread_mutex_unlock(&mutex);
+    if (s != 0){
+        printf("pthread_mutex_unlock error in enqueue");
+    }
+    return 0;
 }
 
-void * extractData(int data){
-    printf("EXITOOOOOOOOOOOOOOOO-----------------------");
-    return EXIT_SUCCESS;
+void * postServer(){
+    FIFOList head;
+    int dataFromMiner;
+    int s;
+
+    s = pthread_mutex_lock(&mutex);
+    if(s != 0){
+        printf("pthread_mutex_lock error in dequeue");
+    }
+
+    m_dequeue(&dataFromMiner, &head); //Extract data from queue
+
+    char buf[BUF_LEN] = {0};
+    time_t rawtime = time(NULL);
+    if (rawtime == -1) {
+        puts("The time() function failed");
+        return 1;
+    }
+
+    struct tm *ptm = localtime(&rawtime);
+    if (ptm == NULL) {
+
+        puts("The localtime() function failed");
+        return 1;
+    }
+
+    strftime(buf, BUF_LEN, "%FT%T%z", ptm);
+
+    char payload[4096];
+    snprintf(
+            payload,
+            4096,
+            "[{\"measurement\":\"cpu\",\"tags\":{\"host_name\":\"example\",\"miner_id\":\"super_miner\"},\"time\":\"%s\",\"captures\":{\"value\":%d}}]",
+            buf,
+            dataFromMiner
+    );
+
+    printf("Generated Payload: %s \n", payload);
+    int result = send_http_post("/cpu_metric", payload, "application/json");
+    printf("Post Sucessfully, %d ", result);
+
+    s = pthread_mutex_unlock(&mutex);
+    if(s != 0){
+        printf("pthread_mutex_unlock error in dequeue");
+    }
+
 }
 
 int counterDataQueue(){
@@ -96,8 +157,16 @@ int counterDataQueue(){
 }
 
 void createThread(int id, int data){
+    /*
+     t1: Send CPU data to queue
+     t2: Extract CPU data from queue
+     t3: Send Memory data to queue
+     t4: Extract Memory data from queue
+     */
+
     pthread_t t1, t2, t3, t4, t5, t6, t7, t8;
     int s;
+    int fullQueue = counterDataQueue();
 
     switch (id){
         case 1:
@@ -107,10 +176,9 @@ void createThread(int id, int data){
                 printf("pthread_create error %lu", t1);
             }
 
-            /*Cuando la cola tenga 100 elementos envie los datos al servidor*/
-            int fullQueue = counterDataQueue();
+            //Cuando la cola tenga 100 elementos envie los datos al servidor
             if (fullQueue >= 100){
-                s = pthread_create(&t2, NULL, extractData(data), NULL);
+                s = pthread_create(&t2, NULL, postServer(), NULL);
 
                 if(s != 0){
                     printf("pthread_create error %lu", t2);
@@ -129,12 +197,84 @@ void createThread(int id, int data){
             break;
 
         case 2:
+            s = pthread_create(&t3, NULL, insertData(data), NULL);
+
+            if(s != 0){
+                printf("pthread_create error %lu", t3);
+            }
+
+            //Cuando la cola tenga 100 elementos envie los datos al servidor
+            if (fullQueue >= 100){
+                s = pthread_create(&t4, NULL, postServer(), NULL);
+
+                if(s != 0){
+                    printf("pthread_create error %lu", t4);
+                }
+            }
+
+            s = pthread_join(t3, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t3);
+            }
+
+            s = pthread_join(t4, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t4);
+            }
             break;
 
         case 3:
+            s = pthread_create(&t5, NULL, insertData(data), NULL);
+
+            if(s != 0){
+                printf("pthread_create error %lu", t5);
+            }
+
+            //Cuando la cola tenga 100 elementos envie los datos al servidor
+            if (fullQueue >= 100){
+                s = pthread_create(&t6, NULL, postServer(), NULL);
+
+                if(s != 0){
+                    printf("pthread_create error %lu", t6);
+                }
+            }
+
+            s = pthread_join(t5, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t5);
+            }
+
+            s = pthread_join(t6, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t6);
+            }
             break;
 
         case 4:
+            s = pthread_create(&t7, NULL, insertData(data), NULL);
+
+            if(s != 0){
+                printf("pthread_create error %lu", t7);
+            }
+
+            //Cuando la cola tenga 100 elementos envie los datos al servidor
+            if (fullQueue >= 100){
+                s = pthread_create(&t8, NULL, postServer(), NULL);
+
+                if(s != 0){
+                    printf("pthread_create error %lu", t8);
+                }
+            }
+
+            s = pthread_join(t7, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t7);
+            }
+
+            s = pthread_join(t4, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t8);
+            }
             break;
 
         default:
@@ -157,17 +297,17 @@ void minerAdminProcess(int minerId) {
         case 2:
             memoryInformation = memoryMiner();
             printf("Mem info: %d", memoryInformation);
-            createThread(2);
+            createThread(2, memoryInformation);
             break;
         case 3:
             networkInformation = networkMiner();
             printf("Net info: %d", networkInformation);
-            createThread(3);
+            createThread(3, networkInformation);
             break;
         case 4:
             diskInformation = diskMiner();
             printf("Disk info: %d", diskInformation);
-            createThread(4);
+            createThread(4, diskInformation);
             break;
         default:
             printf("Not recognize miner process, please insert other entry");
