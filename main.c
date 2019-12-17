@@ -7,7 +7,7 @@
 
 #define ERROR -1
 
-static pthread_mutex_t mtx; //Sincronizacion de procesos
+static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER; //Sincronizacion de procesos
 
 void handler1(){
     printf("Process control");
@@ -17,13 +17,15 @@ void handler1(){
 int cpuMiner() {
     FILE *cpuInfo = fopen("/proc/stat", "rb");
     char line[1024];
-    unsigned long int user, nice, system, idle, iowait, irq, softirt;
+    char header[3];
+    unsigned long int cpuCalculator, user, nice, system, idle, iowait, irq, softirt;
     int cpuUsage = 0;
 
     while (fgets(line, sizeof(line), cpuInfo) != NULL) {
         if (strstr(line, "cpu ") != NULL) {
-            sscanf(line, "%lu %lu %lu %lu %lu %lu %lu", &user, &nice, &system, &idle, &iowait, &irq, &softirt);
-            cpuUsage = (int) nice;
+            sscanf(line, "%s %lu %lu %lu %lu %lu %lu %lu", header, &user, &nice, &system, &idle, &iowait, &irq, &softirt);
+            cpuCalculator = (idle * 100) / (user + nice + system + idle + iowait + irq + softirt);
+            cpuUsage = (int) cpuCalculator;
         }
     }
 
@@ -80,6 +82,67 @@ int diskMiner() {
     return diskUsage;
 }
 
+void * insertData(int data){
+    return EXIT_SUCCESS;
+}
+
+void * extractData(int data){
+    printf("EXITOOOOOOOOOOOOOOOO-----------------------");
+    return EXIT_SUCCESS;
+}
+
+int counterDataQueue(){
+    return 0;
+}
+
+void createThread(int id, int data){
+    pthread_t t1, t2, t3, t4, t5, t6, t7, t8;
+    int s;
+
+    switch (id){
+        case 1:
+            s = pthread_create(&t1, NULL, insertData(data), NULL);
+
+            if(s != 0){
+                printf("pthread_create error %lu", t1);
+            }
+
+            /*Cuando la cola tenga 100 elementos envie los datos al servidor*/
+            int fullQueue = counterDataQueue();
+            if (fullQueue >= 100){
+                s = pthread_create(&t2, NULL, extractData(data), NULL);
+
+                if(s != 0){
+                    printf("pthread_create error %lu", t2);
+                }
+            }
+
+            s = pthread_join(t1, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t1);
+            }
+
+            s = pthread_join(t2, NULL);
+            if(s != 0){
+                printf("pthread_join error %lu", t2);
+            }
+            break;
+
+        case 2:
+            break;
+
+        case 3:
+            break;
+
+        case 4:
+            break;
+
+        default:
+            printf("Id not found, invalid id");
+            break;
+    }
+}
+
 void minerAdminProcess(int minerId) {
     int cpuInformation;
     int memoryInformation;
@@ -89,18 +152,22 @@ void minerAdminProcess(int minerId) {
         case 1:
             cpuInformation = cpuMiner();
             printf("Cpu info: %d", cpuInformation);
+            createThread(1, cpuInformation);
             break;
         case 2:
             memoryInformation = memoryMiner();
             printf("Mem info: %d", memoryInformation);
+            createThread(2);
             break;
         case 3:
             networkInformation = networkMiner();
             printf("Net info: %d", networkInformation);
+            createThread(3);
             break;
         case 4:
             diskInformation = diskMiner();
             printf("Disk info: %d", diskInformation);
+            createThread(4);
             break;
         default:
             printf("Not recognize miner process, please insert other entry");

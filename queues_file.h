@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef char DATA; //Tipo de dato a almacenar
+typedef int DATA; //Tipo de dato a almacenar
 typedef struct {
     DATA *buf;
     size_t head, tail, alloc;
