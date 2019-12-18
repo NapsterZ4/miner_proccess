@@ -6,5 +6,5 @@ C_FLAGS =  -pthread -lcurl -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/usr/lib/x86_64-linux-gnu 
 

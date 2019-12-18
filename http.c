@@ -1,6 +1,7 @@
 //
 // Created by Pedro Guzmán on 12/10/19.
 //
+#include <curl/curl.h>
 #include "http.h"
 
 int send_http_post(char * resource, char * payload, char * contentType){
@@ -16,7 +17,7 @@ int send_http_post(char * resource, char * payload, char * contentType){
 
         char accept[50] = "Accept: ";
         strcat(accept, contentType);
-        char encoding[strlen("charset: utf-8")] = "charset: utf-8";
+        char encoding[50] = "charset: utf-8";
 
 
 

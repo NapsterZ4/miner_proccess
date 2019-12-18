@@ -1,1 +1,1 @@
-/usr/bin/cc  -pthread -lcurl -g   CMakeFiles/miner_proccess.dir/main.c.o CMakeFiles/miner_proccess.dir/http.c.o  -o miner_proccess 
+/usr/bin/cc  -pthread -lcurl -g   CMakeFiles/miner_proccess.dir/main.c.o CMakeFiles/miner_proccess.dir/http.c.o  -o miner_proccess -lcurl 

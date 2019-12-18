@@ -39,12 +39,14 @@ int cpuMiner() {
 int memoryMiner() {
     FILE *ramInfo = fopen("/proc/meminfo", "rb");
     char line[1024];
-    unsigned long int memTotal, memF, memA;
+    char header[10];
+    unsigned long int memF, memA;
     int totalMemAvailable = 0;
 
-    for (int i = 2; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i) {
         fgets(line, sizeof(line), ramInfo);
-        sscanf(line, "%lu %lu %lu", &memTotal, &memF, &memA);
+        printf("%s", line);
+        sscanf(line, "%s %lu %lu", header, &memF, &memA);
         totalMemAvailable = (int) memF;
     }
 
@@ -55,12 +57,13 @@ int memoryMiner() {
 int networkMiner() {
     FILE *networkInfo = fopen("/proc/net/dev", "rb");
     char line[1024];
+    char header[15];
     unsigned long int interface, bytesPackets;
     int netUsage = 0;
 
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 3; ++i) {
         fgets(line, sizeof(line), networkInfo);
-        sscanf(line, "%lu %lu", &interface, &bytesPackets);
+        sscanf(line, "%s %lu", header, &bytesPackets);
         netUsage = (int) bytesPackets;
     }
 
@@ -120,14 +123,12 @@ void * postServer(){
     time_t rawtime = time(NULL);
     if (rawtime == -1) {
         puts("The time() function failed");
-        return 1;
     }
 
     struct tm *ptm = localtime(&rawtime);
     if (ptm == NULL) {
 
         puts("The localtime() function failed");
-        return 1;
     }
 
     strftime(buf, BUF_LEN, "%FT%T%z", ptm);
@@ -149,11 +150,7 @@ void * postServer(){
     if(s != 0){
         printf("pthread_mutex_unlock error in dequeue");
     }
-
-}
-
-int counterDataQueue(){
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 void createThread(int id, int data){
@@ -162,11 +159,15 @@ void createThread(int id, int data){
      t2: Extract CPU data from queue
      t3: Send Memory data to queue
      t4: Extract Memory data from queue
+     t5: Send Network data to queue
+     t6: Extract Network data from queue
+     t7: Send Disk data to queue
+     t8: Extract Disk data from queue
      */
+    FIFOList l;
 
     pthread_t t1, t2, t3, t4, t5, t6, t7, t8;
     int s;
-    int fullQueue = counterDataQueue();
 
     switch (id){
         case 1:
@@ -177,7 +178,7 @@ void createThread(int id, int data){
             }
 
             //Cuando la cola tenga 100 elementos envie los datos al servidor
-            if (fullQueue >= 100){
+            if (!isQueueEmpty(&l)){
                 s = pthread_create(&t2, NULL, postServer(), NULL);
 
                 if(s != 0){
@@ -204,7 +205,7 @@ void createThread(int id, int data){
             }
 
             //Cuando la cola tenga 100 elementos envie los datos al servidor
-            if (fullQueue >= 100){
+            if (!isQueueEmpty(&l)){
                 s = pthread_create(&t4, NULL, postServer(), NULL);
 
                 if(s != 0){
@@ -231,7 +232,7 @@ void createThread(int id, int data){
             }
 
             //Cuando la cola tenga 100 elementos envie los datos al servidor
-            if (fullQueue >= 100){
+            if (!isQueueEmpty(&l)){
                 s = pthread_create(&t6, NULL, postServer(), NULL);
 
                 if(s != 0){
@@ -258,7 +259,7 @@ void createThread(int id, int data){
             }
 
             //Cuando la cola tenga 100 elementos envie los datos al servidor
-            if (fullQueue >= 100){
+            if (!isQueueEmpty(&l)){
                 s = pthread_create(&t8, NULL, postServer(), NULL);
 
                 if(s != 0){
@@ -271,7 +272,7 @@ void createThread(int id, int data){
                 printf("pthread_join error %lu", t7);
             }
 
-            s = pthread_join(t4, NULL);
+            s = pthread_join(t8, NULL);
             if(s != 0){
                 printf("pthread_join error %lu", t8);
             }
@@ -344,7 +345,10 @@ int main(int argc, char *argv[]) {
             parentProcessMiner(3);
         } else if (strcmp(argv[i], "-d") == 0) {
             parentProcessMiner(4);
+        } else if (strcmp(argv[i], "p") == 0){
+            cpuMiner();
         }
     }
+
     signal(getppid(), (__sighandler_t) SIGKILL);
 }

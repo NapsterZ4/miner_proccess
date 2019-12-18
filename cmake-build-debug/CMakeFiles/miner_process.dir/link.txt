@@ -1,0 +1,1 @@
+/usr/bin/cc  -pthread -lcurl -g   CMakeFiles/miner_process.dir/main.c.o  -o miner_process -lcurl 

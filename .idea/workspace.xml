@@ -12,18 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d77bedac-ec70-4cec-bdb2-f8fb5027f4cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/http.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/miner_proccess.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/miner_proccess" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/miner_proccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http.c" beforeDir="false" afterPath="$PROJECT_DIR$/http.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queues_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/queues_file.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,7 @@
       <workItem from="1576549637234" duration="8237000" />
       <workItem from="1576604752188" duration="1266000" />
       <workItem from="1576607024194" duration="269000" />
-      <workItem from="1576609725565" duration="9272000" />
+      <workItem from="1576609725565" duration="20166000" />
     </task>
     <servers />
   </component>
@@ -198,10 +199,10 @@
       <screen x="46" y="27" width="3240" height="1053" />
     </state>
     <state x="716" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/46.27.3240.1053@46.27.3240.1053" timestamp="1575867384139" />
-    <state x="3" y="545" width="1674" height="853" key="DiffContextDialog" timestamp="1575436931759">
+    <state x="99" y="186" width="1674" height="853" key="DiffContextDialog" timestamp="1576620256828">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="3" y="545" width="1674" height="853" key="DiffContextDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575436931759" />
+    <state x="99" y="186" width="1674" height="853" key="DiffContextDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1576620256828" />
     <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1576557933917">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
@@ -254,6 +255,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="215" y="136" width="1107" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1576557973532" />
+    <state x="826" y="471" width="303" height="171" key="VCS.ChangelistChooser" timestamp="1576620261791">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="826" y="471" width="303" height="171" key="VCS.ChangelistChooser/46.27.1874.1053@46.27.1874.1053" timestamp="1576620261791" />
     <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1575155193034">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
@@ -279,10 +284,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="392" y="225" width="645" height="272" key="git4idea.rebase.GitRebaseDialog/46.27.1874.1053@46.27.1874.1053" timestamp="1575155174825" />
-    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576616391252">
+    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576625403502">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup/46.27.1874.1053@46.27.1874.1053" timestamp="1576616391252" />
+    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup/46.27.1874.1053@46.27.1874.1053" timestamp="1576625403502" />
     <state x="1083" y="259" width="1162" height="678" key="search.everywhere.popup/46.27.3240.1053@46.27.3240.1053" timestamp="1576102008555" />
   </component>
 </project>
